@@ -24,7 +24,7 @@ function CreateNewProject() {
 
   return (
     <>
-      <div className="flex items-center justify-start pt-[30px]">
+      <div className="flex items-center justify-start pt-[30px] px-[30px]">
         <img
           className="w-[52px] h-[52px]"
           src={Logo}
@@ -33,7 +33,7 @@ function CreateNewProject() {
         />
         <div className="text-4xl font-[800] text-[#7E22CE]">LAMA.</div>
       </div>
-      <div className="flex items-center justify-end">
+      <div className="flex items-center justify-end px-[64px] gap-[19px]">
         <img className="w-[54px] h-[54px]" src={Setting} alt="setting" />
         <img
           className="w-[64px] h-[64px]"
