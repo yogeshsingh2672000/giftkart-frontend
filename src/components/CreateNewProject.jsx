@@ -3,6 +3,7 @@ import Banner from "../assets/banner.png";
 import Logo from "../assets/logo.png";
 import Notification from "../assets/notification.png";
 import Setting from "../assets/setting.png";
+import Home from "../assets/home.png";
 import Modal from "../helper/Modal";
 
 function CreateNewProject() {
@@ -41,7 +42,18 @@ function CreateNewProject() {
           alt="notification"
         />
       </div>
-      <div className="flex flex-col items-center justify-center h-[calc(100%-150px)] px-[212px]">
+      <div className="px-[185px]">
+        <div className="flex box_shadow hover:bg-[#9999994d] cursor-pointer transition-all ease-in-out delay-75 gap-[6px] border border-[#999999] w-[200px] rounded-[35px] px-[14px] py-[6px] items-center">
+          <img
+            className="w-[29px] h-[29px]"
+            src={Home}
+            alt="home"
+            loading="lazy"
+          />
+          <div className="text-[21px] font-[400] leading-6">Back to Home</div>
+        </div>
+      </div>
+      <div className="flex flex-col items-center justify-center h-[calc(100%-190px)] px-[212px]">
         <div className="text-7xl text-[#7E22CE] font-[700]">
           Create New Project
         </div>
@@ -70,18 +82,20 @@ function CreateNewProject() {
 
       {/* modal */}
       <Modal isOpen={isModalOpen} onClose={closeModal}>
-        <div className="font-[700]">Create Project</div>
-        <div className="flex flex-col pt-[20px]">
-          <label htmlFor="input">Enter Project Name:</label>
+        <div className="text-[55px] font-[700]">Create Project</div>
+        <div className="flex flex-col pt-[20px] gap-[13px]">
+          <label className="text-[30px]" htmlFor="input">
+            Enter Project Name:
+          </label>
           <input
             onChange={handleName}
             value={projectName}
-            className="border rounded-[5px] py-[5px] px-[10px]"
+            className="border rounded-[5px] py-[5px] px-[10px] text-[30px] "
             type="text"
             placeholder="Type here"
           />
           {projectName.length < 3 && (
-            <label htmlFor="warning" className="text-red-800">
+            <label htmlFor="warning" className="text-red-800 text-[24px]">
               Project Name Can't be empty
             </label>
           )}
@@ -89,13 +103,13 @@ function CreateNewProject() {
         <div className="p-6 flex justify-end">
           <button
             onClick={closeModal}
-            className="text-red-800 text-sm inline-flex items-center px-5 py-2.5 text-center mr-2"
+            className="text-red-800 text-[30px] inline-flex items-center px-5 py-2.5 text-center mr-2"
           >
             Cancel
           </button>
           <button
             onClick={closeModal}
-            className="text-white bg-purple-700 rounded-lg text-md font-medium px-5 py-2.5 "
+            className="text-white bg-purple-700 rounded-lg text-[30px] font-medium px-5 py-2.5 "
           >
             Create
           </button>
